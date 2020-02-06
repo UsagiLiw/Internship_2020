@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class Main {
@@ -15,8 +16,12 @@ public class Main {
                 String newName = IOHandler.getString("Enter name #" + (i + 1) + ": ");
                 name.add(newName);
             }
-            //Acronymization and sorting
-            
+            //abbreviation and sorting
+            //Spilt word from one string
+            for (int i = 0; i < name.size(); i++) {
+                String[] words = name.get(i).split(" ");
+
+            }
             System.out.println();
             for (int i = 0 ; i < number ; i++) {
                 System.out.println(name.get(i));
