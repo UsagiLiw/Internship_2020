@@ -1,10 +1,19 @@
-import javax.swing.*;
-import java.util.ArrayList;
+package SortingAcronyms;
 
-public class Main {
+import java.util.ArrayList;
+import Handler.IOHandler;
+
+/**
+ *  A program that let user input names or words
+ *  and abbreviate them then sort by length of the acronym first
+ *  followed by alphabetic sort.
+ *
+ *  Created by Nonthakorn Sukprom, 7 February 2020
+ */
+public class AcronymSort {
+
     public static void main(String[] args) {
-        boolean bContinue = true;
-        while(bContinue) {
+        while(true) {
             int number = IOHandler.getInteger("Enter number of names: ");
             if (number <= 0){
                 System.out.println("Number must be more than 0!");
@@ -16,19 +25,21 @@ public class Main {
                 String newName = IOHandler.getString("Enter name #" + (i + 1) + ": ");
                 names.add(new Name(newName));
             }
-            System.out.println("\n"+ names.get(0).getAcronym());
-            //abbreviation and sorting
-            //Spilt word from one string
-
-            /*System.out.println();
+            //System.out.println("\n"+ names.get(0).getAcronym());
+            /*sorting*/
+            ArrayList<String> acronyms = new ArrayList<>();
             for (int i = 0 ; i < number ; i++) {
-                System.out.println(names.get(i));
+                acronyms.add(names.get(i).getAcronym());
+            }
+            acronyms.sort(new LengthComparator());
+            for (int i = 0 ; i < number ; i++) {
+                System.out.println(acronyms.get(i));
             }
             String exit = IOHandler.getString("Do you want to exit? (y/n): ");
             if (exit.startsWith("Y") || exit.startsWith("y")){
                 System.out.println("Exit ... ");
                 System.exit(0);
-            }*/
+            }
         }
     }
 }

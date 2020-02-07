@@ -1,5 +1,6 @@
-import java.util.ArrayList;
+package SortingAcronyms;
 
+import java.util.ArrayList;
 import static java.lang.Character.*;
 
 /**
