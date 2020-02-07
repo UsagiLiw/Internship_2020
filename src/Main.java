@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.util.ArrayList;
 
 public class Main {
-
     public static void main(String[] args) {
         boolean bContinue = true;
         while(bContinue) {
@@ -11,26 +10,25 @@ public class Main {
                 System.out.println("Number must be more than 0!");
                 continue;
             }
-            ArrayList<String> name = new ArrayList<String>();
+            //Enter names
+            ArrayList<Name> names = new ArrayList<Name>();
             for (int i = 0 ; i < number ; i++){
                 String newName = IOHandler.getString("Enter name #" + (i + 1) + ": ");
-                name.add(newName);
+                names.add(new Name(newName));
             }
+            System.out.println("\n"+ names.get(0).getAcronym());
             //abbreviation and sorting
             //Spilt word from one string
-            for (int i = 0; i < name.size(); i++) {
-                String[] words = name.get(i).split(" ");
 
-            }
-            System.out.println();
+            /*System.out.println();
             for (int i = 0 ; i < number ; i++) {
-                System.out.println(name.get(i));
+                System.out.println(names.get(i));
             }
             String exit = IOHandler.getString("Do you want to exit? (y/n): ");
             if (exit.startsWith("Y") || exit.startsWith("y")){
                 System.out.println("Exit ... ");
                 System.exit(0);
-            }
+            }*/
         }
     }
 }
