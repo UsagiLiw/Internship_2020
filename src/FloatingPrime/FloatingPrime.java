@@ -34,18 +34,23 @@ public class FloatingPrime {
                     break;
                 }
             }
-            if(isPrime){
+            if (isPrime) {
                 System.out.println("TRUE");
-            }
-            else {
+            } else {
                 System.out.println("FALSE");
             }
         }
     }
 
+    /**
+     * Method for check if the number is prime or not
+     *
+     * @param number number to check prime
+     * @return true if prime , false if not prime
+     */
     private static boolean checkPrime(int number) {
         // Any number should not be divisible to the target except the target itself
-        if (number == 1){
+        if (number == 1) {
             return false;
         }
         for (int i = 2; i < number; i++) {

@@ -1,7 +1,8 @@
 package SortingAcronyms;
 
-import java.util.ArrayList;
 import Handler.IOHandler;
+
+import java.util.ArrayList;
 
 /**
  *  A program that let user input names or words
@@ -25,7 +26,6 @@ public class AcronymSort {
                 String newName = IOHandler.getString("Enter name #" + (i + 1) + ": ");
                 names.add(new Name(newName));
             }
-            //System.out.println("\n"+ names.get(0).getAcronym());
             /*sorting*/
             ArrayList<String> acronyms = new ArrayList<>();
             for (int i = 0 ; i < number ; i++) {

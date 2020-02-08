@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * A simplify version of hangman but digit.
  * User input set of 12 numbers as a problem number
  * then input number in one digit to guess
- * <p>
+ *
  * Created by Nonthakorn Sukprom, 8 February 2020
  */
 public class DigitHangman {
@@ -65,10 +65,8 @@ public class DigitHangman {
             }
             if (!guessRight) {
                 WrongString += (guessNumber + " ");
-                System.out.println(WrongString);
-            } else {
-                System.out.println(WrongString);
             }
+            System.out.println(WrongString);
             System.out.println(score);
         }
     }
