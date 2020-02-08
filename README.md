@@ -6,7 +6,7 @@ as a screening test consists of 4 problems:
   - Digit Hangman
   - Basic Web Crawler
   
-All of the solutions are are in each package name accordingly to problem name.
+All of the solutions are are in each package name accordingly to problem name inside src folder.
 
 ### For Basic Web Crawler problem
 Need to add JSoup as an external library
