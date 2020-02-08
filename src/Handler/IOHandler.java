@@ -41,13 +41,23 @@ public class IOHandler {
     /**
      * Asks for a double and returns to the caller.
      * @param prompt    String to print, asking for input.
-     * @return          the double user entered.
+     * @return the double user entered.
      */
-    public static double getDouble (String prompt){
+    public static double getDouble(String prompt) {
         System.out.println(prompt);
         double value = scn.nextDouble();
         /*Fix the problem that the terminal's cursor does not move to the next line after read input*/
         scn.nextLine();
         return value;
+    }
+
+    public static boolean checkNumeric(String string) {
+        boolean isNumeric = true;
+        try {
+            int num = Integer.parseInt(string);
+        } catch (NumberFormatException e) {
+            isNumeric = false;
+        }
+        return isNumeric;
     }
 }
